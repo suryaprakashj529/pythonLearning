@@ -1,0 +1,10 @@
+# In Python, when a float is converted to an integer, its decimal part is stripped off. In other words, the conversion is equivalent to rounding the float down to the nearest whole number (or truncating it at the decimal point). So in this case, 9.7 is converted to 9
+
+
+# x = "4.5"
+# int(x) wont work
+#  int(float(x))  will work converted to 4
+
+x = int(float(input("Type a number")))
+y = x + 5
+print(y)
