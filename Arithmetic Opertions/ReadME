@@ -5,7 +5,7 @@
 # multiplication, division and mod
 # addition and subtraction
 
-# integer division ( 4.5 // 2)  = 2
+# integer division ( 4.5 // 2)  = 2.0 #any operand is float result will be float
 
 # exponent ( 9 ** 2)  = 18
 
