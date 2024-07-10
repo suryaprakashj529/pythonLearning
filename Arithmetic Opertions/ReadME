@@ -1,0 +1,23 @@
+# presidence:
+
+# brackets/paranthesis
+# Exponents
+# multiplication, division and mod
+# addition and subtraction
+
+# integer division ( 4.5 // 2)  = 2
+
+# exponent ( 9 ** 2)  = 18
+
+# "54" + "65" = "5465" is str 
+# 4/5 = 0.8 ( in python "/" always returns float so 0.8)
+# 
+# important and note point 
+# 9//2.5 = 3.0 ( integer division always return only integer but if operand is type float it will return float forcefully)
+
+# This expression uses the integer-division operator (//), which returns the number of times that the denominator evenly divides the numerator.
+
+# Here, 2.5 evenly divides 9 three times. The correct answer is 3.0 as opposed to 3, because the denominator is a float, which means that the result will also be a float.
+
+# 7/1 = 7.0
+
