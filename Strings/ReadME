@@ -1,0 +1,147 @@
+# string
+# str = "hello"
+# str.upper()
+#str.lower()
+
+# is_digit()
+"""
+# str = "20"
+# str.is_digit() -- will work only for digits
+
+# str= "20.4" or str = "20h" wont return TRUE for is_digit()
+"""
+
+# .split()
+
+"""
+str = "hello i am workning on python"
+
+lst = str.split()  # by default .split will take " "(space) as delimiter and split and save to list
+
+print(lst)
+
+str = "jello,hi,jello,hell"
+lst = str.split(",") 
+
+lst will contains = {"jello","hi","jello","hell"}
+
+"""
+
+# F or f string
+
+# .join
+"""
+str_lst={'t','p','p'}
+
+# string = " ".join(str_lst)
+
+# o/p: t o p
+# string = "-".join(str_lst)
+
+o/p= t-o-p
+"""
+"""
+var = "algoexpert".upper().replace("o", "i").capitalize().lower().split("e")
+print(var)
+print("foo".join(var))
+
+"algoexpert".upper() = "ALGOEXPERT"
+
+"ALGOEXPERT".replace("o", "i") = "ALGOEXPERT"
+"ALGOEXPERT".capitalize() = "Algoexpert"
+Algoexpert.lower() = "algoexpert"
+
+"algoexpert".split("e")
+
+var = ["algo", "xp", "rt"]
+"foo".join(var) = algofooxpfoort
+
+
+"""
+
+"""
+# Write your code here.
+
+# You'll have to use the following strings:
+# 1) "Enter an integer: "
+# 2) "What is your name? "
+# 3) "Hello, "
+
+user_input = input("Enter an integer: ")
+if user_input.isdigit():
+    str=input("What is your name? ").upper()
+    print(f"Hello, {str}")
+else:
+    print(user_input.capitalize())
+
+OUTPUT:
+Enter an integer: 23
+What is your name?lavanya
+Hello, LAVANYA
+PS C:\Users\Lavanya\OneDrive\Desktop\python_learn> & C:/msys64/ucrt64/bin/python.exe c:/Users/Lavanya/OneDrive/Desktop/python_learn/test.py
+Enter an integer: lavanyaSurya
+Lavanyasurya
+"""
+
+
+"""
+# Write your code here.
+
+# You'll have to use the following strings:
+# 1) "Enter a word: "
+# 2) "Enter another word: "
+# 3) "The first word is contained in the second one"
+# 4) "The first word isn't contained in the second one"
+
+input_lst = []
+input_lst.append(input("Enter a word: "))
+input_lst.append(input("Enter another word: "))
+
+if input_lst[0] in input_lst[1]:
+    print("The first word is contained in the second one")
+else:
+    print("The first word isn't contained in the second one")
+
+output:
+Enter a word: we
+Enter another word: welcome
+The first word is contained in the second one
+PS C:\Users\Lavanya\OneDrive\Desktop\python_learn> & C:/msys64/ucrt64/bin/python.exe c:/Users/Lavanya/OneDrive/Desktop/python_learn/test.py
+Enter a word: hellop
+Enter another word: gjhghg
+The first word isn't contained in the second one
+"""
+
+"""
+# Write your code here.
+
+# You'll have to use the following strings:
+# 1) "Enter a sentence: "
+# 2) "There are _ words in this sentence"
+
+user_input = input("Enter a sentence: ").split()
+print(f"There are {len(user_input)} words in this sentence")
+
+Output:
+Enter a sentence: Hello, Lav's thankyou
+There are 3 words in this sentence
+
+"""
+
+"""
+for i in range(1, 8, 2):
+    print(' ' * ((9 - i) // 2) + '*' * i)
+
+# Print inverted triangle
+for i in range(5, 0, -2):
+    print(' ' * ((9 - i) // 2) + '*' * i)
+
+    output:
+    *
+   ***
+  *****
+ *******
+  *****
+   ***
+    *
+"""
