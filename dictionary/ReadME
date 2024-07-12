@@ -1,0 +1,33 @@
+# A dictionary is a good choice when you care about how many times items occur in a collection or if they exist in it at all. This is because determining if an item exists in a dict is much faster than doing so in a list, and you can map an item to its frequency in a dict.
+
+# A dictionary doesn't maintain the order in which items are added to it, but a list does. A tuple also maintains the order of items but it's items cannot be modified.
+
+# In Python, trying to access a key that doesn't exist in a dictionary raises an exception.
+
+# To avoid this, you should use the .get(key, default=None) method, which will return None if the key doesn't exist in the dictionary that the method is called on.
+
+"""
+# Write your code here.
+
+# You'll have to use the string: "Enter a string: "
+# prints the characters and their frequencies 
+
+count = {}
+while True:
+    str = input("Enter a string: ")
+    for char in str:
+        count[char] = count.get(char,0) + 1
+    break
+
+for key,value in count.items():
+    print(F"{key}: {value}"
+
+
+
+output:
+Enter a string: hello
+h: 1
+e: 1
+l: 2
+o: 1
+"""
