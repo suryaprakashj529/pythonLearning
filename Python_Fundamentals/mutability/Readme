@@ -1,0 +1,43 @@
+# it's very important to remember that dictionaries, lists, and sets are mutable in Python!
+"""
+x = [1, 2, 3, 4]
+y = x
+z = x[:]
+y.append(3)
+z.append(1)
+y = [1, 2]
+
+print(x)
+[1, 2, 3, 4, 3]
+
+"""
+
+"""
+x = (1, 2, 3)
+y = x
+z = x
+y += (1, 2)
+z += (2, 3)
+
+print(x)
+(1, 2, 3)
+
+"""
+
+"""
+def replace(lst, target, swap_value):
+    # Write your code here.
+    for ele in range(len(lst)):
+        element = lst[ele]
+
+        if element == target:
+            lst[ele] = swap_value
+
+
+
+             lst = ["i", "love", "programmingexpert"]
+        target = "programmingexpert"
+        swap_value = "algoexpert"
+
+        ["i", "love", "algoexpert"]
+"""
