@@ -1,0 +1,81 @@
+# A set is an unordered collection of unique elements.
+# A set holds individual elements.
+
+"""
+x = set("hello world")
+
+When converting a string to a set, all of the unique characters in the string are added to the set. Therefore, {'h', 'e', 'l', 'o', ' ', 'w', 'r', 'd'} is the correct answer.
+
+x = set()
+x.add("hello world")
+
+print(x)
+
+output:
+{'hello world'}
+"""
+
+"""
+set1 = {1, 2, 3, 4, 5, 6}
+set2 = {2, 4, 5, 6, 7}
+x = set1 - set2
+
+{1, 3}
+Explanation
+The set difference of sets A and B, denoted A – B, is the set of all elements in A that are not in B. In this case, the set difference is {1, 3}.
+"""
+
+"""
+Which of the following expressions indicates whether set1 is a proper subset of set2?
+
+set1 < set2
+Explanation
+The < operator indicates whether one set is a proper subset of another. Therefore, set1 < set2 is the correct answer.
+"""
+
+"""
+Which of the following expressions indicates whether set1 is a superset of set2?
+
+Explanation
+The >= operator indicates whether one set is a superset of another. Therefore, set1 >= set2 is the correct answer.
+"""
+
+
+"""
+What is the value of x in the code snippet below?
+
+set1 = {1, 2, 3, 4, 5, 6}
+set2 = {2, 4, 5, 6, 7}
+x = set1 ^ set2
+
+Answer
+{1, 3, 7}
+Explanation
+The ^ operator returns the symmetric difference between two sets. The symmetric difference is the set of elements which are in either of the sets, but not in their intersection. Therefore, {1, 3, 7} is the correct answer.
+
+"""
+
+"""
+What is the value of x in the code snippet below?
+
+set1 = {1, 2, 3, 4, 5, 6}
+set2 = {2, 4, 5, 6, 7}
+x = set1 | set2
+
+Answer
+{1, 2, 3, 4, 5, 6, 7}
+Explanation
+The | operator is the union operator and is used to combine or join two sets together. Therefore, {1, 2, 3, 4, 5, 6, 7} is the correct answer.
+
+"""
+
+"""
+character = set()
+while True:
+    ch = input("Enter a character: ")
+    if (ch in character) or (len(ch) > 1):
+        break 
+    character.add(ch)
+print("Number of unique characters entered:", len(character))
+    
+"""

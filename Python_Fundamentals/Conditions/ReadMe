@@ -1,0 +1,65 @@
+# ASCII code for each key 
+# get ASCII value of character using ord('a')
+# using integer get ASCII character - chr(97)
+
+ord(a)  # 97
+chr('a') # a
+
+
+a = 3.0 == 3 # True
+print(a) 
+
+a = 3.0 != 3
+print(a)  # False
+
+
+a = 3 <= "6" # error
+
+a = 3 == "3"  
+print(a) # False
+
+# Here ASCII value is compared
+a = "a" <= "a"
+print(a)  # True
+
+a = "ac" <= "ab"
+print(a)  # False
+
+True == 1 # True
+x = "lz" 
+x="m"
+y = "hello" < "he" + x
+print(y) # True
+
+
+x=3
+y=5
+z=2
+w=2
+
+print(w<x + y)  # True , here expression will be evaluated first s0 2 < 8
+
+print(x==y-2)   # True, here expression will be evaluted first 3 == 3 
+print(z!=0) #True
+print (z+z == z*z)  # True, possible only when z=2
+print(w>0) # True
+
+w = "b"   
+x = "hello"  # <- Change this
+y = "hello"  # <- Change this
+z = "d"  # <- Change this
+
+# Don't change any of these `condition_` variables.
+condition_1 = w != "a"  #keep anything other than "a"
+condition_2 = w < x
+condition_3 = x == y  # here told that both x and y are same
+condition_4 = y == "hello"
+condition_5 = z > "c" # z is greater than "c" so keep anything which is bigger than ASCII value of "c"
+
+# All of these should print `True`.
+print(condition_1)
+print(condition_2)
+print(condition_3)
+print(condition_4)
+print(condition_5)
+

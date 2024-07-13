@@ -1,0 +1,56 @@
+if condition:
+    print()
+else:
+    print()
+    
+condition = True;
+if condition:
+    print()
+elif condition:
+    print()
+else:
+    print()
+
+"""
+X = float(input("How old are you? "))
+if X >= 13:
+    print("You can ride the roller coaster!")
+else:
+    print("You can't ride the roller coaster.")
+
+    """
+
+"""
+# You'll have to use the following strings:
+# 1) "What's your favorite programming language? "
+# 2) For Python, "Nice choice!"
+# 3) For Golang, "You're a cool kid I see..."
+# 4) For JavaScript, "Okay Mr. web developer."
+# 5) For anything else, "I don't know that language."
+Fav_Program_Lan = input("What's your favorite programming language? ")
+if Fav_Program_Lan == "Python":
+    print("Nice choice!")
+elif Fav_Program_Lan == "Golang":
+    print("You're a cool kid I see...")
+elif Fav_Program_Lan == "JavaScript":
+    print("Okay Mr. web developer.")
+else:
+    print("I don't know that language.")
+"""
+
+
+"""
+# Write your code here.
+
+# You'll have to use the following strings:
+# 1) "Enter a number: "
+# 2) "Enter another number: "
+# 3) "The sum of these two numbers is:"
+# 4) "That is a large sum!"
+x = float(input("Enter a number: "))
+if x >= 10 and x <=20:
+    y = float(input("Enter another number: "))
+    print("The sum of these two numbers is:", float(x+y))
+    if x+y > 100:
+        print("That is a large sum!")
+"""

@@ -1,0 +1,46 @@
+# List is data type that stores the ordered collection of items
+
+lst = {1,2,"hello",True,-3,4.0}
+
+#lst.append(item)
+"""
+lst = [[0, 2, 4], 1, [6, 8, 10], 2, [[1, 2], [3, 4], [5, 6]], 3]
+
+print(lst[-2][1][0] + lst[2][2])
+
+# lst[-2][1][0] -[[1, 2], [3, 4], [5, 6]] -  3
+# lst[2][2] - [6, 8, 10] 10
+
+
+list[-20] - element range not present raises out of range Exception
+
+list.index(2) - prints the index value - if not present raise Exception
+
+"""
+
+"""
+lst_1 = [1, "True", 2.0]
+lst_2 = [[1, 2], 3]
+  
+print(lst_1 + lst_2)
+
+
+list1 is appended to list2
+
+"""
+
+"""
+# Write your code here.
+
+# You'll have to use the following strings:
+# 1) "Enter a string: "
+# 2) "Enter a number: "
+str_list = []
+index_lst =[]
+for i in range(5):
+    str_list.append(input("Enter a string: "))
+for i in range(3):
+    index_lst.append(input("Enter a number: "))
+print(str_list[int(float(index_lst[0]))] + str_list[int(float(index_lst[1]))] + str_list[int(float(index_lst[2]))])
+
+"""

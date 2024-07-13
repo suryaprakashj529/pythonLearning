@@ -1,0 +1,13 @@
+# input function
+# to gather input from command line
+
+# hello = input("getInput =")
+# print(hello)
+
+# get the type of input
+# print(type(hello))
+
+# input function always returns str values. Even if the user inputs an integer like 2, the input function returns the string "2"
+
+# name = input("What is your name?")
+# print("Hello,", name)
