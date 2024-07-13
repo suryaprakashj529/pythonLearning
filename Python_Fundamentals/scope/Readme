@@ -1,0 +1,74 @@
+"""
+global:
+
+The reason for this is that the global keyword adds side-effects to a function 
+and makes it dependent on something referenced outside the function scope. 
+This means changes to the globally referenced object can change the behaviour of the function 
+and be difficult to detect, especially if a bug or issue arises.
+
+ In summary, the global keyword often introduces unnecessary complexity and can almost always be avoided.
+"""
+
+"""
+def foo():
+    x = "hello world"
+
+foo()
+print(x)
+
+No, the program won't output anything and will actually raise an exception.
+ This is because x isn't defined in the global scope and therefore can't be accessed there.
+"""
+
+"""
+x = 5
+
+def foo(x):
+    x = 4
+
+foo(x)
+print(x)
+
+5 onnly
+"""
+
+""""
+x = 5
+
+def foo(y):
+    x = 4
+    y = x
+
+foo(x)
+print(x)
+
+"""
+
+"""
+x = []
+
+def foo(y):
+    y.append(1)
+
+foo(x)
+print(x)
+
+sincle x is mutable value will [1]
+"""
+
+"""
+x = "global"
+
+def foo():
+    global x
+    print(x, end=",")
+    x = "local"
+    print(x, end=",")
+
+foo()
+print(x, end="")
+
+o/p:
+global,local,local
+
+"""
