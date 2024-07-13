@@ -1,0 +1,92 @@
+"""
+def find_all_odds(lst):
+    # Write your code here.
+    new_lst = []
+    for i in lst:
+        if i % 2 == 1:
+            new_lst.append(i)
+        
+    return new_lst
+
+[3, 5, 5]
+
+Your Code's Output
+[3, 5, 5]
+
+"""
+
+"""
+def string_lengths(strings):
+    # Write your code here.
+    new_len_lst = []
+    for str in strings:
+        new_len_lst.append(len(str))
+    return new_len_lst
+
+    strings = ["hello", "this", "is", "a", "beard", "orange", "blue"]
+
+    o/p:
+    [5, 4, 2, 1, 5, 6, 4]
+"""
+
+"""
+def compare_lists(lst1=[], lst2=[]):
+    # Write your code here.
+    lst1set = set(lst1)
+    lst2set = set(lst2)
+
+    intersectset = lst1set.intersection(lst2set)
+    return len(intersectset)
+
+
+lst1 = [1, 2, 3]
+lst2 = [1, 1, 1]
+
+o/p:
+1
+
+
+"""
+"""
+def trim_list(lst, elements_to_trim):
+    # Write your code here.
+    new_list = []
+    for ele in range(len(lst) - elements_to_trim):
+        new_ele = lst[ele]
+        new_list.append(new_ele)
+    return new_list
+
+    
+    element_to_trim = 3
+lst = [1, 2, 3, 4, 5, 6, 7]
+
+o/p:
+[1, 2, 3, 4]
+"""
+
+"""
+def trim_list(lst, elements_to_trim):
+    # Write your code here.
+    lst = [x for x in lst if x != elements_to_trim ]
+    return lst
+
+print(trim_list([2,3,4,5,"pop",6,"pp","pop"],"pop"))
+"""
+
+"""
+def running_sums(numbers):
+    # Write your code here.
+    sum = 0
+    sum_lst = []
+    for i in numbers:
+        sum = sum + i
+        sum_lst.append(sum)
+    return sum_lst
+
+    
+    i/p:
+    numbers = [5, 4, 2, 1, 5, 6, 4]
+
+    o/p:
+    [5, 9, 11, 12, 17, 23, 27]
+"""

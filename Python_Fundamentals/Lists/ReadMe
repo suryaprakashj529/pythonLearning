@@ -44,3 +44,6 @@ for i in range(3):
 print(str_list[int(float(index_lst[0]))] + str_list[int(float(index_lst[1]))] + str_list[int(float(index_lst[2]))])
 
 """
+
+
+""""""
