@@ -1,0 +1,35 @@
+"""
+lst = [3, 4, 2, -1, 2] 
+
+print(lst.sort())
+
+In Python, the .sort() method sorts a list in place (it mutates the list),
+ and it doesn't return a value. Any Python function or method that doesn't return a value returns None by default; 
+therefore, the code will output None.
+
+"""
+
+"""lst = [3, 4, 2, -1, 2] 
+
+lst.sort(reverse=True)
+print(lst)
+
+[4, 3, 2, 2, -1]
+
+"""
+
+"""
+lst = [3, 4, 5, 0.1, 2]
+
+sorted(lst, reverse=True)
+print(lst)
+
+
+
+In Python, the sorted() function takes in an iterable object and 
+returns a new list containing the object's elements in sorted order. 
+It doesn't sort in place and therefore doesn't mutate the iterable object that's passed to it.
+
+In the provided code, sorted(lst) doesn't change the value of lst; it creates and returns a new list that's sorted. 
+Thus, printing lst at the end of the program just outputs the original value of lst, which is [3, 4, 5, 0.1, 2].
+"""
