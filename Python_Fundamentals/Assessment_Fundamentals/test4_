@@ -1,0 +1,79 @@
+def get_n_longest_unique_words(words, n):
+    new_lst =[]
+    dup_lst = list(set([item for item in words if words.count(item) > 1]))
+
+    new_wrd_lst = list(set(words) - set(dup_lst))
+    new_wrd_lst.sort(key=len,reverse=True)
+   
+    #new_wrd_lst = new_wrd_lst[:-n]
+    for i in range(0,n):
+            new_lst.append(new_wrd_lst[i])
+            n = n-1
+
+    return new_lst
+
+"""
+LONGEST UNIQUE WORDS
+
+# This suite of tests is written to run against your code
+# so that we can check its correctness.
+
+import unittest
+
+import program
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        words = ["Longer", "Whatever", "Longer",
+                 "Ball", "Rock", "Rocky", "Rocky"]
+        n = 3
+        expected = ["Whatever", "Ball", "Rock"]
+        self.assertCountEqual(
+            program.get_n_longest_unique_words(words, n), expected)
+
+    def test_case_2(self):
+        words = ["Longer", "Whatever", "Longer",
+                 "Ball", "Rock", "Rocky", "Rocky"]
+        n = 1
+        expected = [
+            "Whatever",
+        ]
+        self.assertCountEqual(
+            program.get_n_longest_unique_words(words, n), expected)
+
+    def test_case_3(self):
+        words = ["Longer", "Whatever", "Longer",
+                 "Ball", "Rock", "Rocky", "Rocky"]
+        n = 0
+        expected = []
+        self.assertCountEqual(
+            program.get_n_longest_unique_words(words, n), expected)
+
+    def test_case_4(self):
+        words = [
+            "Hello",
+            "AlgoExpert",
+            "Algo",
+            "Testing",
+            "Programming",
+            "Programming",
+            "Coding",
+            "Python",
+            "JavaScript",
+            "Coding",
+            "Ruby",
+        ]
+        n = 5
+        expected = ["AlgoExpert", "JavaScript", "Testing", "Python", "Hello"]
+        self.assertCountEqual(
+            program.get_n_longest_unique_words(words, n), expected)
+
+    def test_case_5(self):
+        words = ["Hello", "Hello", "Hello", "Abcd", "bcd", "a", "ab"]
+        n = 2
+        expected = ["Abcd", "bcd"]
+        self.assertCountEqual(
+            program.get_n_longest_unique_words(words, n), expected)
+
+"""
