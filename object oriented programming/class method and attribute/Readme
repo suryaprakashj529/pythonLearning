@@ -1,0 +1,30 @@
+# In Python, class attributes are attributes associated with a class, not an instance of a class. 
+Class attributes can be accessed by using the class name or from any instance of the class.
+
+###
+ Class methods accept a mandatory cls parameter 
+and are denoted using the @classmethod decorator, 
+while instance attributes accept a mandatory self parameter. 
+Class methods don't have access to an instance and therefore, 
+can only modify and access class attributes and
+ can only call other class (or static) methods.
+  Instance attributes have access to an instance and can modify and 
+access both instance and
+ class attributes as well as call any other methods defined in the class.4
+ ###
+
+
+ ###
+
+ @classmethod 
+def reduce_population(cls, reduction): 
+  cls.population -= reduction
+Explanation
+This method is correct because it satisfies all of the following:
+
+Has the @classmethod decorator.
+Accepts cls as the first parameter.
+Accesses the population class attribute by using cls.
+
+###
+

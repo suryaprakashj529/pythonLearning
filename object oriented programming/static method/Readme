@@ -1,0 +1,33 @@
+"""
+class Physics:
+    # Write your code here
+    @staticmethod
+    def calculate_net_force(mass, acceleration):
+        if mass < 0 or acceleration < 0:
+            return 0.0
+
+        return mass * acceleration
+
+    @staticmethod
+    def calculate_acceleration(mass, net_force):
+        if mass <= 0 or net_force <0:
+            return 0.0
+        return net_force / mass
+
+    @staticmethod
+    def calculate_mass(net_force, acceleration):
+        if acceleration <= 0 or net_force < 0:
+            return 0.0
+
+        return net_force / acceleration
+
+
+Static methods can be thought of as utility functions that are defined inside of a class.
+ They do not have any mandatory parameters and cannot access instance attributes, 
+class attributes or methods.
+ Static methods can be called from an instance or by using the class name directly.
+
+ Static methods are denoted with the@staticmethoddecorator and take no mandatory parameters. 
+ You can think of them as utility functions that are defined inside of a class.
+   They have no access to instance attributes, class attributes or methods.
+"""
