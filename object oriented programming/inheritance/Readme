@@ -1,0 +1,128 @@
+ #  Parent class, superclass and base class are all synonymous for a class that is inherited from.
+
+# Child class, subclass and derived class are all synonymous for a class that inherits from another class.
+
+# Write your code here
+class Animal:
+    def __init__(self, age, weight, height):
+        self.age = age
+        self.weight = weight
+        self.height = height
+
+class Mammal(Animal):
+    def __init__(self, age, weight, height, sex):
+        super().__init__(age, weight, height)
+        self.sex = sex
+
+class Reptile(Animal):
+    def __init__(self, age, weight, height, legs):
+        super().__init__(age, weight, height)
+        self.legs = legs
+
+class Monkey(Mammal):
+    fingers =5
+    def __init__(self, age, weight, height, sex, color):
+        super().__init__(age, weight, height,sex)
+        self.color = color
+
+class Lizard(Reptile):
+    tail = True
+    
+    def __init__(self, age, weight, height, legs, color):
+        super().__init__(age, weight, height,legs)
+        self.color = color
+
+    
+
+    """
+    class A:
+    def foo(self):
+        print('A')
+
+class B:
+    def foo(self):
+        print('B')
+
+class C(A, B):
+    pass
+
+class D(C):
+    pass
+
+a = D()
+
+Explanation
+In Python, when a method is called on an object it first looks for it in the subclass,
+ which in this case is D. Since D does not have a foo() method
+   it proceeds to look in D's superclasses which in this case is solely C. 
+   Since C has no foo() method it looks in C's superclasses which are A and B. 
+   Since A is the first declared superclass this is the one Python looks in first. 
+   Since A has a foo() method that is called.
+     If A did not have a foo() method then the foo() in B would be called.
+    """
+
+    """
+    class A:
+    def foo(self):
+        print('A')
+
+class B:
+    def foo(self):
+        print('B')
+
+class C(A, B):
+    def foo(self):
+        print('C')
+
+class D(C):
+    pass
+
+a = D()
+
+Explanation
+In Python, when a method is called on an object it first looks for it in the subclass, 
+which in this case is D. Since D does not have a foo() method 
+it proceeds to look in D's superclasses which in this case is solely C. 
+Since C has a foo() method defined that is the one that is called. 
+If C did not have a foo() method then 
+it would proceed to look in the superclass(es) of C for any foo() method(s).
+    """
+
+    """
+    class A:
+    pass
+
+class B:
+    pass
+
+class C(A, B):
+    pass
+
+class D(C):
+    pass
+
+a = D()
+
+This is because a is an instance of D which inherits from class C which inherits from both class A and B.
+    
+    """
+
+    """
+    class A:
+    pass
+
+class B:
+    pass
+
+class C(A, B):
+    pass
+
+class D(C):
+    pass
+
+a = C()
+
+This is because a is an instance of C which inherits from both class A and B.
+    """
+
+
