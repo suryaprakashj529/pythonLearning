@@ -1,0 +1,28 @@
+# An abstract class is designed to act as the base class in an inheritance hierarchy and is not designed to be instantiated. 
+# Abstract classes usually contain abstract methods that are meant to be implemented by classes that inherit from them.
+
+# All method types are allowed in an abstract class. Abstract classes usually contain some concrete methods
+# (ones that provide an implementation) while also defining abstract methods that must be implemented by child classes that inherits from it.
+
+ # In many other programming languages it is enforced that a subclass of an abstract class must implement any abstract methods it contains. 
+ # However, in Python this behavior is not enforced and although it is conventional for subclasses of an abstract class to do so it is not required.
+
+
+# An abstract class should not be instantiated and is meant to function'
+#  as a base class that provides already implemented behavior that can be extended by any subclasses to create a full implementation. 
+# Abstract classes often contain abstract methods that are meant to be implemented by any subclasses to create a full implementation of the abstract class.
+
+class Animal:
+    def sleep(self):
+        print("ZzzZzz")
+
+    def animal_sound(self):
+        raise NotImplementedError("Methiod not implemented")
+
+    def wake_up(self):
+        self.animal_sound()
+        print("I am awke!")
+
+class Lion(Animal):
+    def animal_sound(self):
+        print("Roar!")
