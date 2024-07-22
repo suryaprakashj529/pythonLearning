@@ -1,0 +1,15 @@
+# Design Principles
+"""
+1 - Divide And Conquer
+2 - Cohesion
+3 - Coupling
+4 - Abstraction
+5 - Reusability
+6 - Reuse
+7 - Flexibility
+8 - Obsolescence
+9 - Portability
+10 - Testability
+11 - Defensibility
+
+"""
