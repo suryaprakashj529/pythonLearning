@@ -1,0 +1,28 @@
+"""
+print(*"hello")
+
+This is the case because the * operator unpacks an iterable object (in this case a string)
+ into it's individual elements and passes the elements as positional arguments to the function. 
+ Since the print function takes any number of positional arguments and prints them seperated by spaces we get h e l l o.
+
+ 
+print(*[1, 2, 3, 4], **{'end': "|", 'sep': "*"})
+
+
+ The * operator unpacks an iterable object (in this case a list) 
+ into it's individual elements and passes the elements as positional arguments to a function.
+   This means the print function gets passed 1, 2, 3 and 4 as positional arguments.
+
+The ** operator unpacks items from a dictionary into keyword arguments that are passed to a function.
+ This means the print function gets passed end="|" and sep="*" as keyword arguments. The sep keyword argument defines the seperator between individual items, by default it is a space. The end keyword argument defines the last character to be printed, by default it is a \n.
+
+If we break down the code after the * and ** are applied we get the following:
+ print(1, 2, 3, 4, end="|", sep="*"). This results in 1*2*3*4| being printed.
+"""
+def get_args_and_kwargs(*args, **kwargs):
+    num = kwargs.get("num",0)
+    if ((len(args) + len(kwargs)) >= 4) and num >5:
+        
+        return True
+    else:
+        return False
