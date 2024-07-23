@@ -1,0 +1,96 @@
+"""
+In Python, lambda functions can have any number of arguments. Here is an example of a lambda function with multiple parameters:
+
+lambda x, y: x + y + 5
+
+In Python, lambda functions can have optional parameters. Here is an example of a lambda with an optional parameter:
+
+lambda x, y=1: x + y + 5
+
+
+In Python, lambda functions can accept positional arguments. Here is an example of calling a lambda function using a keyword argument:
+
+func = lambda x, y: x + y + 5
+func(y=1, x=1)  # this will return 7
+
+
+
+a = lambda y: lambda x: lambda z: print(x + y, end=z)
+
+a holds a complicated lambda function because it returns a lambda that returns a lambda. This means we'll need three subsequent function calls to execute the print statement.
+
+When we call a("b") a lambda that looks like the following is returned lambda x: lambda z: print(x + "b", end=z).
+When we call a("b")("a") a lambda that looks like the following is returned lambda z: print("a" + "b", end=z).
+When we call a("b")("a")("|") we execute the print statement with y = "b", x = "a" and z = "|"
+
+
+
+add_values = lambda x, y, z: x + y + z
+
+max_length = lambda x, y:max(len(x),len(y))
+
+create_set = lambda x, y: set(x).union(y)
+
+
+# This suite of tests is written to run against your code
+# so that we can check its correctness.
+
+import unittest
+
+import program
+
+
+class TestProgram(unittest.TestCase):
+    def test_case_1(self):
+        result = program.add_values(1, 2, 3)
+        self.assertEquals(6, result)
+
+    def test_case_2(self):
+        result = program.add_values(2, 4, 3)
+        self.assertEquals(9, result)
+
+    def test_case_3(self):
+        result = program.add_values(2, 0, 0)
+        self.assertEquals(2, result)
+
+    def test_case_4(self):
+        result = program.add_values(-2, -4, 2)
+        self.assertEquals(-4, result)
+
+    def test_case_5(self):
+        result = program.add_values(1.5, 2.3, 8.1)
+        self.assertAlmostEqual(11.9, result)
+
+    def test_case_6(self):
+        result = program.max_length("", "")
+        self.assertEqual(0, result)
+
+    def test_case_7(self):
+        result = program.max_length("hello", "tim")
+        self.assertEqual(5, result)
+
+    def test_case_8(self):
+        result = program.max_length("no", "yes")
+        self.assertEqual(3, result)
+
+    def test_case_9(self):
+        result = program.max_length("         ", "testing")
+        self.assertEqual(9, result)
+
+    def test_case_10(self):
+        result = program.create_set([1, 2, 3], [2, 3])
+        self.assertEqual(set([1, 2, 3]), result)
+
+    def test_case_11(self):
+        result = program.create_set([], [])
+        self.assertEqual(set([]), result)
+
+    def test_case_12(self):
+        result = program.create_set([], [2, 3])
+        self.assertEqual(set([2, 3]), result)
+
+    def test_case_13(self):
+        result = program.create_set([1, 2, 3, 4], [4, 5, 6])
+        self.assertEqual(set([1, 2, 3, 4, 5, 6]), result)
+
+"""
