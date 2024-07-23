@@ -1,0 +1,69 @@
+# A Python package is a collection of Python modules where Python modules are individual Python files. 
+# Modules can import other modules and packages and packages may contain initialization code that imports other packages or modules.
+
+"""
+x/
+    __init__.py
+    y/
+        __init__.py
+        z.py
+        w.py
+    a/
+        __init__.py
+        b/
+            d.py
+            e.py
+        c/
+            f.py
+
+            Python packages are any directories that contain a __init__.py file, packages may be nested in other packages.
+
+"""
+
+"""
+x/
+    __init__.py
+    main.py <- you are here
+    a/
+        __init__.py
+        b/
+            __init__.py
+            c.py
+
+
+In Python, when from is used it always appears before import. In this case we are importing foo from the c module in the b package which is in the a package.
+"""
+
+
+"""
+x/
+    main.py <- you are here
+    a/
+        __init__.py
+        b.py
+
+
+# x/main.py
+import a
+# x/a/__init__.py
+from .b import foo
+# x/a/b.py
+def foo(): 
+    print("a")
+
+print("b")
+if __name__ == "__main__":
+    foo()
+
+In Python, when you import a package the code inside of the package's __init__.py file runs once. 
+This means when we import the a package the line from .b import foo will run. 
+
+Similarly to packages, when you import a module the code inside of that module runs once. '
+That means when we import b from the x/a/__init__.py file the line print("b") will run. 
+
+The if __name__ == "__main__": will also be ran but the condition  __name__ == "__main__" will be False,
+ meaning we will not call the foo() function. 
+ 
+ The reason this condition will be False is because we did not direclty run this file, we imported it.
+
+"""
