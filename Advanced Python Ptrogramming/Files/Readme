@@ -1,0 +1,25 @@
+"""
+"r": Opens a file for reading and places the file cursor at the start of the file.
+"w": Opens a file for writing by creating a new file. This will override existing files and place the file cursor at the start of the new file.
+"a": Opens a file for appending. This opens an existing file and places the file cursor at the end of the file.
+"r+": Opens a file for both writing and reading and places the file cursor at the start of the file.
+"""
+
+with open("data/programmingExpert.txt", "r") as file:
+    data = file.read()
+    #data = data.strip("")
+    rem_spcl = data.replace("\n", " ")
+
+    other_rem = rem_spcl.replace(",","").replace("-","").replace(".","")
+    
+    lit  = other_rem.split(" ")
+    empty = lit.count("")
+
+    #print(lit)
+    print(len(lit)-empty)
+
+
+with open("programmingExpert.txt", "a") as file:
+    for i in range(1,51):
+        file.write(str(i*i))
+        file.write(str("\n"))
