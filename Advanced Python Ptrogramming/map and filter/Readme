@@ -1,0 +1,38 @@
+lst = ["algoexpert", "is", "the", "best"]
+x = map(len, lst)
+print(list(x))
+
+
+"""
+The map function takes two arguments, a function and an iterable object.
+ In this case the function we passed was len and the iterable was lst. 
+ The map function then generates a new iterable object that maps all of the values from the iterable to the passed function. 
+ The new iterable will have elements equal to the return value of the function called on each element.
+ Since our function is len we get an iterable containing the lengths of all of the strings in lst.
+
+"""
+
+lst = [[2, 3, 4], [4, 5, 6], [1, 1, 1], [0, 0], [-5, -7]]
+x = filter(lambda a: abs(sum(a)) > 10, lst)
+print(list(x))
+
+"""
+Explanation
+The filter function works similarily to the map function and accepts as arguments a function and an iterable. 
+In this case the function we passed was lambda a: abs(sum(a)) > 10 and the iterable was lst. 
+The filter function then generates a new iterable object that contains only the elements that when passed to the function returned True.
+
+To determine what elements will be in the iterable returned by the filter function we need to first understand what the passed function does.
+In this example the function we passed will take the absolute value of the sum of the element passed (which will be a list of numbers) and determine if it is greater than 10. 
+The only elements in our list where the function returns True are [4, 5, 6] and [-5, -7].
+"""
+
+
+"""
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Write your code here.
+new_lst = filter(lambda y:y % 2 == 0, map(lambda x:x**2, lst))
+for i in new_lst:
+    print(i)
+"""
