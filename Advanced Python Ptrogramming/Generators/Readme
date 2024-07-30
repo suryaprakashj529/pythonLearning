@@ -1,0 +1,30 @@
+#  In Python, the presence of the yield keyword in a function makes that function a generator.
+def a(lst, power):
+    for element in lst:
+        if element % 2 == 0:
+            yield element ** power
+
+gen = a([1, 2, 3, 4, 5, 6, 7, 8], 2)
+next(gen)
+next(gen)
+next(gen)
+print(next(gen))
+
+"""
+When the a function is called it returns a generator that allows for the use of the next method. 
+Generators works exactly like iterators and will maintain their internal state until they are reset or run out of elements to iterate through.
+
+In this code, our generator yields all of the even element squares from the input list. This results in the calls to next returning 4, 16, 36 and 64 respectively; we only print 64.
+"""
+
+def new_range(start, stop, step):
+    current = start
+
+    while True:
+        if step < 0 and current <= stop:
+            break
+        if step > 0 and current >= stop:
+            break
+
+        yield current
+        current += step
