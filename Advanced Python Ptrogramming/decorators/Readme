@@ -1,0 +1,42 @@
+"""
+When using multiple decorators the modifications of the second decorator (one furthest to the function) will be applied to the modifications of the first decorator (one closest to the function). Here is an example of a function that uses multiple decorators:
+
+@timer
+@log_output
+def func():
+    ...
+
+"""
+
+"""
+def a(func):
+    def b(): 
+        print("start")
+        func()
+        print("end")
+
+The formal definition of a decorator is "a function that takes another function 
+and extends the behavior of the latter function without explicitly modifying it".
+ This function is almost a decorator but is missing an important feature, the return statement. 
+ This function does not return the inner function and therefore is not a proper decorator. 
+It can still be used as a decorator but any function decorated with it will not be executable.
+"""
+
+def add_one(func):
+    def add(x, y):
+        return_value = func(x, y)
+        return return_value +1
+
+    return add
+
+@add_one
+def add_values(x, y):
+    return x + y
+
+def print_return_value(func):
+    def anyfunc(*args, **kwargs):
+        result = func(*args, **kwargs)
+        print(result)
+        return result
+
+    return anyfunc
