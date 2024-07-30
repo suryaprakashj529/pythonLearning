@@ -1,0 +1,19 @@
+# Source code is the code programmers write in high-level programming languages like Python. 
+# It is often very close to English in structure and syntax and is later translated into other forms of code that allow it to be executed by a computer.
+
+# Although Python is known as an interpreted language it does still need to be compiled into bytecode to become executable.
+
+# An interpreter is a virtual machine that translates code into target machine code during execution.4
+
+# The first step that occurs when Python is ran is the following.
+#  The compiler translates Python source code into bytecode that is then read and executed by the interpreter.
+
+# Before the interpreter can execute any code it must first be translated into bytecode. 
+#The compiler translates Python source code into bytecode which is lower-level code 
+#that can be interpreted by the interpreter. The interpreter then executes bytecode in it's execution environment.
+
+""""
+A compiler or interpreter is simply an implementation of the Python programming language. 
+Many different compilers and interpreters exist that have slight differences in code compilation and run-time efficiency. 
+Some popular compilers and interpreters include: PyPy, CPython, JYthon, IronPython, Brython, Nuitka and PyJS.
+"""
