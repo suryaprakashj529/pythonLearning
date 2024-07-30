@@ -1,0 +1,57 @@
+def a(x):
+    def b(x):
+        print(x)
+
+    return b
+
+a("b")("a")
+
+"""
+
+This is because when calling function a, function b will be returned. 
+Function b uses the parameter x which is a name that exists in the outer function scope in function a. 
+However, since function b defines its own x parameter locally it will use that value, not the value from the outer scope. 
+Therefore, the value passed as parameter x to function b will be printed which has the value "a"
+"""
+
+def foo(x):
+    def bar():
+        nonlocal x
+        print(x)
+        x = 1
+
+    print(x)
+    return bar
+
+foo(3)()
+
+"""
+The foo function is called with x = 3.
+The bar function is created but not executed.
+The foo function prints the value of x at the current point in time, which is still 3; the code x = 1 has not be executed yet.
+The bar function is returned.
+The bar function is called (denoted by the second set of paranthesis on the call foo(3)()).
+The bar function defines nonlocal x which means it will be referencing and changing the x in it's outer scope which comes from function foo.
+The bar function prints the value of x which is still 3.
+The bar function changes the value of x to 1 which has no effect on what has already been printed.
+
+"""
+
+def foo(x, y):
+    def bar():
+        nonlocal y
+        x = 3
+        y *= 5
+
+    bar()    
+    return x, y
+
+print(foo(4, 5))
+
+"""
+When foo(4, 5) is called x = 4 and y = 5 and the body of foo is executed.
+The bar function is then called from inside of foo and declares nonlocal y. Now y will be referenced and modified from the outer scope.
+The first line of the bar function is x = 3 which declares a new local variable in the bar scope. This does not modify the parameter x from the outer scope.
+Next, y is multiplied by 5 which does modify the value of the parameter y from the outer scope. This is because y was declared as nonlocal.
+The bar function then terminates and when x and y are returned from the foo function their values are 4 and 25 respectively.
+"""
