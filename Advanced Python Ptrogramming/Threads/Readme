@@ -104,3 +104,36 @@ thread1.join()
 thread2.join()
 thread3.join()
 thread4.join()
+
+
+import threading
+
+
+def printfoo(ntimes, foo_l, bar_l):
+    for _ in range(ntimes):
+        foo_l.acquire()
+        print("foo", end="")
+        bar_l.release()
+        
+
+def printbar(ntimes, foo_l, bar_l):
+    for _ in range(ntimes):
+        bar_l.acquire()
+        print("bar", end="")
+        foo_l.release()
+
+ntimes = int(input("Enter a positive integer: "))
+foo_l = threading.Lock()
+bar_l = threading.Lock()
+bar_l.acquire()
+
+        
+thread1 = threading.Thread(target=printfoo, args=(ntimes, foo_l, bar_l))
+thread2 = threading.Thread(target=printbar, args=(ntimes, foo_l, bar_l))
+
+thread1.start()
+thread2.start()
+
+thread1.join()
+thread2.join()
+
