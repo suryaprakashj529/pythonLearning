@@ -1,0 +1,29 @@
+# In Python, an asynchronous program that does not explicitly define other threads runs in one thread. 
+# The async paradigm enables better concurreny and simpler programs and is recommended to use over standard multithreading.
+
+# The most straightforward definition of a coroutine is a function that can suspend its execution and resume later. 
+# Coroutines are functions that can yield their control periodically or when in idle to allow other coroutines to run. This is how concurrency is implemented in a single thread.
+
+
+async def add_one(coroutine):
+    return_value = await coroutine()
+    return return_value +1
+
+
+    import asyncio
+
+
+async def append_two_values(lst, value1, value2):
+    lst.append(value1)
+    await asyncio.sleep(0.5)
+    lst.append(value2)
+
+
+lst = []
+# Write your code here.
+
+async def main(lst):
+    lst_new =[append_two_values(lst, 1, 4), append_two_values(lst, 3, 6), append_two_values(lst, 2, 5)]
+    await asyncio.gather(*lst_new)
+
+asyncio.run(main(lst))
